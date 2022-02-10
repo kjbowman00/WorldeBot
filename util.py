@@ -5,7 +5,6 @@ Created on Thu Feb 10 16:52:11 2022
 @author: Kyle
 """
 from enum import Enum
-import random
 
 
 def letter_counter(word):
@@ -61,7 +60,7 @@ def remove_impossible_words(remaining_words, guess, GOG):
             # aka keep all with less than or equal
             remaining_words = [x for x in remaining_words if (letter_counter(x)[guessNum] <= letter_count_current[guessNum])]
                 
-    return (remaining_words, GOG)
+    return remaining_words
 
 def runWordle(guess, correct_word):
     """! Simulate wordle by calculating the green/orange/gray for a guess
